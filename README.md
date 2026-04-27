@@ -1,299 +1,229 @@
-<div align="center">
+# 📈 Regression Analysis — Machine Learning Assignment
 
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=2,3,12&height=180&section=header&text=📐%20Regression%20Algorithms&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=45&desc=Machine%20Learning%20Assignment%20•%20Python%20•%20Scikit-Learn&descAlignY=68&descAlign=50" width="100%"/>
+[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)]()
 
-<br/>
-
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Regression-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
-[![Jupyter](https://img.shields.io/badge/Jupyter-4%20Notebooks-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
-[![NumPy](https://img.shields.io/badge/NumPy-Numerical-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
-[![Pandas](https://img.shields.io/badge/Pandas-DataFrames-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org)
-
-<br/>
-
-> **From salary prediction to housing prices — a hands-on exploration of 5 regression algorithms, regularization techniques, and model evaluation.**
-
-<br/>
-
-[📖 Overview](#-overview) • [🧪 Algorithms](#-algorithms-covered) • [📊 Results](#-model-performance) • [📁 Structure](#-project-structure) • [🚀 Quick Start](#-quick-start) • [📚 Concepts](#-key-concepts)
-
-</div>
+> A comprehensive implementation of **5 regression algorithms** in Machine Learning — from simple linear regression to regularization techniques — with hands-on datasets, evaluation metrics, and a full model comparison.
 
 ---
 
-## 📖 Overview
+## 📌 Table of Contents
 
-This assignment is a structured, practical exploration of **Regression in Machine Learning** — going from the simplest straight-line fit to regularized models that handle high-dimensional, noisy data.
-
-Each algorithm is implemented in its own dedicated Jupyter notebook with:
-- ✅ Clean, well-commented code
-- ✅ Real-world datasets
-- ✅ Evaluation metrics (R² Score & MSE)
-- ✅ Visualizations and plots
-- ✅ Final cross-model comparison
-
----
-
-## 🧪 Algorithms Covered
-
-### 1️⃣ Simple Linear Regression
-> `notebooks/1_simple_linear_regression.ipynb`
-
-**Dataset:** `salary_dataset.csv` — Years of Experience → Salary  
-**Concept:** Fits a single straight line `y = mx + b` to model the relationship between one input feature and a continuous target.
-
-```python
-model = LinearRegression()
-model.fit(X_train, y_train)
-```
-
-- **Feature:** YearsExperience
-- **Target:** Salary
-- **Output:** Regression line plot + R² / MSE
+- [Project Overview](#-project-overview)
+- [Algorithms Covered](#-algorithms-covered)
+- [Datasets Used](#-datasets-used)
+- [Project Structure](#-project-structure)
+- [Notebooks Summary](#-notebooks-summary)
+- [Model Performance Results](#-model-performance-results)
+- [Installation & Setup](#-installation--setup)
+- [Technologies Used](#-technologies-used)
+- [Key Learnings](#-key-learnings)
+- [Author](#-author)
 
 ---
 
-### 2️⃣ Multiple Linear Regression
-> `notebooks/2_multiple_linear_regression.ipynb`
+## 📖 Project Overview
 
-**Dataset:** `housing_dataset.csv` — Area, Bedrooms, Bathrooms → Price  
-**Concept:** Extends linear regression to multiple input features: `y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ`
+This assignment explores five core **regression algorithms** in supervised machine learning using Python and scikit-learn. Each algorithm is implemented in a dedicated Jupyter Notebook with a relevant dataset, step-by-step code, visualizations, and performance evaluation.
 
-```python
-# Features: area, bedrooms, bathrooms → Target: price
-X = df[['area', 'bedrooms', 'bathrooms']]
-y = df['price']
-```
-
-- **Features:** Area (sq ft), Bedrooms, Bathrooms
-- **Target:** House Price
-- **Output:** Coefficient analysis + predictions
+**Goals:**
+- Understand how linear, polynomial, and regularized regression models work
+- Apply models to real-world style datasets (salary, housing, job levels)
+- Compare model performance using **R² Score** and **Mean Squared Error (MSE)**
+- Identify when to use regularization (Ridge / Lasso) to combat overfitting
 
 ---
 
-### 3️⃣ Polynomial Regression
-> `notebooks/3_polynomial_regression.ipynb`
+## 🤖 Algorithms Covered
 
-**Dataset:** `polynomial_dataset.csv`  
-**Concept:** Captures non-linear relationships by transforming features into polynomial terms before fitting a linear model.
-
-```python
-from sklearn.preprocessing import PolynomialFeatures
-poly = PolynomialFeatures(degree=2)
-X_poly = poly.fit_transform(X)
-```
-
-- **Use case:** Curved, non-linear data patterns
-- **Output:** Polynomial curve fit visualization
+| # | Algorithm | Type | Dataset Used | Key Concept |
+|---|---|---|---|---|
+| 1 | Simple Linear Regression | Linear | Salary (YearsExperience → Salary) | Single feature, straight-line fit |
+| 2 | Multiple Linear Regression | Linear | Housing (area, bedrooms, bathrooms → price) | Multiple features, hyperplane fit |
+| 3 | Polynomial Regression | Non-linear | Job Level → Salary | Degree-2 feature transformation |
+| 4 | Ridge Regression | Regularized | Housing dataset | L2 penalty, shrinks coefficients |
+| 5 | Lasso Regression | Regularized | Housing dataset | L1 penalty, performs feature selection |
 
 ---
 
-### 4️⃣ Ridge & Lasso Regression (Regularization)
-> `notebooks/4_ridge_lasso_regression.ipynb`
+## 📊 Datasets Used
 
-**Concept:** Regularized regression models that penalize large coefficients to prevent overfitting.
-
-| | Ridge (L2) | Lasso (L1) |
-|---|---|---|
-| **Penalty** | Sum of squared coefficients | Sum of absolute coefficients |
-| **Effect** | Shrinks all coefficients | Can zero out coefficients (feature selection) |
-| **Best for** | Multicollinearity | Sparse feature sets |
-| **Alpha used** | `1.0` | `0.1` |
-
-```python
-from sklearn.linear_model import Ridge, Lasso
-
-ridge = Ridge(alpha=1.0)
-lasso = Lasso(alpha=0.1)
-```
-
----
-
-## 📊 Model Performance
-
-Results from `results/model_scores/model_comparison.csv`:
-
-| Rank | Model | R² Score | MSE |
-|---|---|---|---|
-| 🥇 | **Ridge Regression** | **0.9952** | 15,112,917,478 |
-| 🥈 | **Lasso Regression** | **0.9944** | 17,605,188,954 |
-| 🥉 | Simple Linear | 0.9289 | 57,069,614 |
-| 4️⃣ | Polynomial | 0.7666 | 11,813,379,747 |
-
-> 💡 **Key Insight:** Ridge and Lasso significantly outperform baseline models on the housing dataset, demonstrating the power of regularization for controlling model complexity.
-
----
-
-## 🧠 Key Concepts
-
-<details>
-<summary><b>📐 What is R² Score?</b></summary>
-
-R² (coefficient of determination) measures how well the model explains variance in the target variable.
-- **R² = 1.0** → Perfect fit
-- **R² = 0.0** → Model is no better than the mean
-- **R² < 0** → Model is worse than the mean
-
-</details>
-
-<details>
-<summary><b>📉 What is MSE?</b></summary>
-
-Mean Squared Error (MSE) measures the average squared difference between predicted and actual values.
-- **Lower MSE = Better model**
-- Sensitive to outliers (squares errors)
-- Useful for comparing models on the same dataset
-
-</details>
-
-<details>
-<summary><b>⚖️ Bias-Variance Tradeoff</b></summary>
-
-- **High Bias (Underfitting):** Model is too simple, misses patterns — e.g., fitting a line to curved data
-- **High Variance (Overfitting):** Model memorizes training data, fails on new data
-- **Regularization (Ridge/Lasso):** Reduces variance by penalizing complexity — improving generalization
-
-</details>
-
-<details>
-<summary><b>🔢 When to use which regression?</b></summary>
-
-| Scenario | Use |
+### 1. `salary_dataset.csv` — Simple Linear Regression
+| Feature | Description |
 |---|---|
-| One feature, linear relationship | Simple Linear |
-| Multiple features, linear | Multiple Linear |
-| Curved/non-linear pattern | Polynomial |
-| Many features, prevent overfitting | Ridge |
-| Many features, want feature selection | Lasso |
+| `YearsExperience` | Years of professional experience |
+| `Salary` | Annual salary (target variable) |
 
-</details>
+25 records mapping experience to salary — ideal for a straight-line regression.
+
+### 2. `housing_dataset.csv` — Multiple Linear / Ridge / Lasso
+| Feature | Description |
+|---|---|
+| `area` | Property area (sq ft) |
+| `bedrooms` | Number of bedrooms |
+| `bathrooms` | Number of bathrooms |
+| `price` | Property price (target variable) |
+
+20 records of housing transactions used across notebooks 2, 4, and 5.
+
+### 3. `polynomial_dataset.csv` — Polynomial Regression
+| Feature | Description |
+|---|---|
+| `Level` | Job level (1–10) |
+| `Salary` | Salary at each level (target variable) |
+
+10 records showing exponential salary growth by job level — cannot be fit by a straight line.
 
 ---
 
 ## 📁 Project Structure
 
-```bash
-Regression_Assignment/
+```
+regression-assignment/
 │
-├── 📂 data/
-│   ├── salary_dataset.csv          # YearsExperience → Salary (25 records)
-│   ├── housing_dataset.csv         # Area/Bedrooms/Bathrooms → Price (20 records)
-│   └── polynomial_dataset.csv      # Non-linear synthetic data
+├── data/
+│   ├── salary_dataset.csv          ← Simple linear regression data
+│   ├── housing_dataset.csv         ← Multiple / Ridge / Lasso data
+│   └── polynomial_dataset.csv      ← Polynomial regression data
 │
-├── 📂 notebooks/
-│   ├── 1_simple_linear_regression.ipynb     # Salary prediction
-│   ├── 2_multiple_linear_regression.ipynb   # Housing price prediction
-│   ├── 3_polynomial_regression.ipynb        # Curve fitting
-│   └── 4_ridge_lasso_regression.ipynb       # Regularization comparison
+├── notebooks/
+│   ├── 1_simple_linear_regression.ipynb
+│   ├── 2_multiple_linear_regression.ipynb
+│   ├── 3_polynomial_regression.ipynb
+│   ├── 4_ridge_lasso_regression.ipynb
+│   └── 5_model_comparison.ipynb
 │
-├── 📂 results/
+├── results/
 │   ├── graphs/
-│   │   └── model_comparison.png             # Visual performance comparison
+│   │   └── model_comparison.png    ← Bar chart: R² scores across all models
 │   └── model_scores/
-│       └── model_comparison.csv             # R² and MSE for all models
+│       └── model_comparison.csv    ← Final comparison table (exported)
 │
 └── README.md
 ```
 
 ---
 
-## 🚀 Quick Start
+## 📓 Notebooks Summary
 
-### 1. Clone the Repository
+### 1. Simple Linear Regression (`1_simple_linear_regression.ipynb`)
+- **Dataset:** `salary_dataset.csv`
+- **Features:** `YearsExperience` → `Salary`
+- **Steps:** Load data → train-test split (80/20) → fit `LinearRegression` → evaluate → scatter + regression line plot
+- **Output:** R² Score and MSE on test set; regression line plotted over raw data
+
+### 2. Multiple Linear Regression (`2_multiple_linear_regression.ipynb`)
+- **Dataset:** `housing_dataset.csv`
+- **Features:** `area`, `bedrooms`, `bathrooms` → `price`
+- **Steps:** Load → EDA → split → train `LinearRegression` → evaluate
+- **Output:** R² Score: **0.9944** | MSE: 17,605,263,177
+
+### 3. Polynomial Regression (`3_polynomial_regression.ipynb`)
+- **Dataset:** `polynomial_dataset.csv`
+- **Features:** `Level` → `Salary` (non-linear, exponential relationship)
+- **Steps:** Apply `PolynomialFeatures(degree=2)` → transform features → fit `LinearRegression` on transformed data
+- **Output:** Curved fit line over exponential salary growth; visual comparison vs straight-line fit
+
+### 4. Ridge & Lasso Regression (`4_ridge_lasso_regression.ipynb`)
+- **Dataset:** `housing_dataset.csv`
+- **Models:**
+  - `Ridge(alpha=1.0)` — L2 regularization → R² Score: **0.9952**
+  - `Lasso(alpha=0.1)` — L1 regularization → R² Score: **0.9944**
+- **Output:** Side-by-side comparison of Ridge vs Lasso vs plain Linear Regression
+
+### 5. Model Comparison (`5_model_comparison.ipynb`)
+- Consolidates all 4 models (Linear, Polynomial, Ridge, Lasso) on the housing dataset in one notebook
+- Builds a final comparison DataFrame sorted by R² Score
+- Exports results to `results/model_scores/model_comparison.csv`
+- Saves a bar chart to `results/graphs/model_comparison.png`
+
+---
+
+## 📈 Model Performance Results
+
+All models evaluated on the **Housing Dataset** with 80/20 train-test split (`random_state=42`):
+
+| Rank | Model | R² Score | MSE |
+|---|---|---|---|
+| 🥇 1 | **Ridge Regression** | **0.9952** | 1.51 × 10¹⁰ |
+| 🥈 2 | Polynomial Regression | 0.9946 | 1.72 × 10¹⁰ |
+| 🥉 3 | Lasso Regression | 0.9944 | 1.76 × 10¹⁰ |
+| 4 | Multiple Linear Regression | 0.9944 | 1.76 × 10¹⁰ |
+
+> **Best model: Ridge Regression** achieved the highest R² Score (0.9952), confirming that L2 regularization slightly improves generalization even on a small, clean dataset.
+
+---
+
+## ⚙ Installation & Setup
+
+### Prerequisites
+- Python 3.9 or higher
+- pip package manager
+
+### Steps
 
 ```bash
-git clone https://github.com/your-username/regression-assignment.git
+# 1. Clone the repository
+git clone https://github.com/<your-username>/regression-assignment.git
 cd regression-assignment
+
+# 2. (Optional) Create a virtual environment
+python -m venv venv
+source venv/bin/activate       # Windows: venv\Scripts\activate
+
+# 3. Install required packages
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+
+# 4. Launch Jupyter Notebook
+jupyter notebook notebooks/
 ```
 
-### 2. Install Dependencies
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
-```
-
-### 3. Launch Jupyter Lab
-
-```bash
-jupyter lab
-```
-
-### 4. Run Notebooks in Order
-
-```
-notebooks/1_simple_linear_regression.ipynb     ← Start here
-notebooks/2_multiple_linear_regression.ipynb
-notebooks/3_polynomial_regression.ipynb
-notebooks/4_ridge_lasso_regression.ipynb       ← Final comparison
-```
-
-> 📌 Each notebook is **self-contained** and can be run independently.
+Open any notebook from the `notebooks/` folder and run all cells top to bottom.
 
 ---
 
-## 📦 Dependencies
+## 🛠 Technologies Used
 
-```txt
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-jupyter
-```
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![JupyterLab](https://img.shields.io/badge/JupyterLab-F37626?style=flat-square&logo=jupyter&logoColor=white)
-
-</div>
+| Library | Purpose |
+|---|---|
+| **Python 3.9+** | Core programming language |
+| **pandas** | Data loading and wrangling |
+| **NumPy** | Numerical operations and array handling |
+| **scikit-learn** | `LinearRegression`, `Ridge`, `Lasso`, `PolynomialFeatures`, `train_test_split`, `r2_score`, `mean_squared_error` |
+| **Matplotlib** | Scatter plots and regression line visualizations |
+| **Seaborn** | Model comparison bar charts |
+| **Jupyter Notebook** | Interactive development environment |
 
 ---
 
-## 📚 Learning Outcomes
+## 💡 Key Learnings
 
-By working through this assignment, the following skills are demonstrated:
-
-- [x] Implementing regression algorithms from scratch using Scikit-Learn
-- [x] Preprocessing data and splitting train/test sets
-- [x] Understanding the mathematics behind each algorithm
-- [x] Evaluating models using R² Score and MSE
-- [x] Visualizing regression lines, curves, and predictions
-- [x] Understanding regularization (Ridge vs Lasso) and when to use each
-- [x] Comparing multiple models systematically
+- **Simple Linear Regression** works well when a single feature has a strong linear relationship with the target variable — YearsExperience is a strong predictor of Salary.
+- **Multiple Linear Regression** improves predictions when several features collectively explain variance in the target — housing price depends on area, bedrooms *and* bathrooms together.
+- **Polynomial Regression** captures non-linear trends. Salary growth by job level is exponential, not linear, and degree-2 transformation fits it much better than a straight line.
+- **Ridge Regression (L2)** shrinks all coefficients proportionally — useful when all features contribute and mild regularization can prevent overfitting without discarding any feature.
+- **Lasso Regression (L1)** can shrink coefficients to exactly zero, performing **automatic feature selection** — ideal when some features may be irrelevant or redundant.
+- On the housing dataset, **Ridge slightly outperformed** all other models (R² = 0.9952), confirming that even a small regularization boost can improve generalization on real-world data.
 
 ---
 
-## 👩‍💻 Author
+## 👤 Author
 
-<div align="center">
+**Keertiraj Kamble**  
+B.E. in Artificial Intelligence & Data Science  
+KLE College of Engineering and Technology (VTU), Bengaluru
 
-**Ananya Mangaj**  
-*Machine Learning Assignment — Regression Algorithms*
-
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/your-username)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/your-profile)
-
-</div>
+[![GitHub](https://img.shields.io/badge/GitHub-Keertiraj2004-181717?style=flat-square&logo=github)](https://github.com/Keertiraj2004)
+[![Email](https://img.shields.io/badge/Email-keertirajkamble023%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:keertirajkamble023@gmail.com)
 
 ---
 
-<div align="center">
+## 📄 License
 
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=2,3,12&height=100&section=footer" width="100%"/>
+This project is submitted as an academic machine learning assignment. Code is free to use for learning and reference purposes.
 
-*⭐ Star this repo if it helped you understand regression!*
+---
 
-</div>
+> ⭐ If this helped you understand regression algorithms, give the repo a star!
