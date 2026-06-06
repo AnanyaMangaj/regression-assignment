@@ -14,7 +14,7 @@
 <br/>
 
 > **From salary prediction to housing prices — a hands-on exploration of 5 regression algorithms, regularization techniques, and model evaluation.**
-
+  
 <br/>
 
 [📖 Overview](#-overview) • [🧪 Algorithms](#-algorithms-covered) • [📊 Results](#-model-performance) • [📁 Structure](#-project-structure) • [🚀 Quick Start](#-quick-start) • [📚 Concepts](#-key-concepts)
