@@ -34,7 +34,7 @@ Each algorithm is implemented in its own dedicated Jupyter notebook with:
 - ✅ Visualizations and plots
 - ✅ Final cross-model comparison
 
----
+---  
 
 ## 🧪 Algorithms Covered
 
