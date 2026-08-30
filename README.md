@@ -27,7 +27,7 @@
 
 This assignment is a structured, practical exploration of **Regression in Machine Learning** — going from the simplest straight-line fit to regularized models that handle high-dimensional, noisy data.
 
-Each algorithm is implemented in its own dedicated Jupyter notebook with:
+Each algorithm is implemented in its own dedicated Jupyter notebook with: 
 - ✅ Clean, well-commented code
 - ✅ Real-world datasets
 - ✅ Evaluation metrics (R² Score & MSE)
