@@ -38,7 +38,7 @@ Each algorithm is implemented in its own dedicated Jupyter notebook with:
 
 ## 🧪 Algorithms Covered     
 
-### 1️⃣ Simple Linear Regression
+### 1️⃣ Simple Linear Regression 
 > `notebooks/1_simple_linear_regression.ipynb`
 
 **Dataset:** `salary_dataset.csv` — Years of Experience → Salary  
