@@ -62,7 +62,7 @@ model.fit(X_train, y_train)
 **Concept:** Extends linear regression to multiple input features: `y = b₀ + b₁x₁ + b₂x₂ + ... + bₙxₙ`
 
 ```python
-# Features: area, bedrooms, bathrooms → Target: price
+# Features: area, bedrooms, bathrooms → Target: price 
 X = df[['area', 'bedrooms', 'bathrooms']]
 y = df['price']
 ```
