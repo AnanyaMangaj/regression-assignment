@@ -126,7 +126,7 @@ Results from `results/model_scores/model_comparison.csv`:
 
 ---
 
-## 🧠 Key Concepts
+## 🧠 Key Concepts   
 
 <details>
 <summary><b>📐 What is R² Score?</b></summary>
