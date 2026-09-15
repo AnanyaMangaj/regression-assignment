@@ -111,7 +111,7 @@ lasso = Lasso(alpha=0.1)
 
 ---
 
-## 📊 Model Performance
+## 📊 Model Performance  
 
 Results from `results/model_scores/model_comparison.csv`:
 
