@@ -49,7 +49,7 @@ model = LinearRegression()
 model.fit(X_train, y_train)
 ```
 
-- **Feature:** YearsExperience
+- **Feature:** YearsExperience  
 - **Target:** Salary
 - **Output:** Regression line plot + R² / MSE
 
