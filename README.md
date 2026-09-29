@@ -102,7 +102,7 @@ X_poly = poly.fit_transform(X)
 | **Best for** | Multicollinearity | Sparse feature sets |
 | **Alpha used** | `1.0` | `0.1` |
 
-```python
+```python 
 from sklearn.linear_model import Ridge, Lasso
 
 ridge = Ridge(alpha=1.0)
