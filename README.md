@@ -67,7 +67,7 @@ X = df[['area', 'bedrooms', 'bathrooms']]
 y = df['price']
 ```
 
-- **Features:** Area (sq ft), Bedrooms, Bathrooms
+- **Features:** Area (sq ft), Bedrooms, Bathrooms  
 - **Target:** House Price
 - **Output:** Coefficient analysis + predictions
 
