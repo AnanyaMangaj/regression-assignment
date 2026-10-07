@@ -71,7 +71,7 @@ y = df['price']
 - **Target:** House Price
 - **Output:** Coefficient analysis + predictions
 
----
+---    
 
 ### 3️⃣ Polynomial Regression
 > `notebooks/3_polynomial_regression.ipynb`
