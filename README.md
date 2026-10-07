@@ -109,7 +109,7 @@ ridge = Ridge(alpha=1.0)
 lasso = Lasso(alpha=0.1)
 ```
 
----
+---   
 
 ## 📊 Model Performance  
 
