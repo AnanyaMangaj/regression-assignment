@@ -1,4 +1,4 @@
-<div align="center">
+⁸<div align="center">
   
 <img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=2,3,12&height=180&section=header&text=📐%20Regression%20Algorithms&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=45&desc=Machine%20Learning%20Assignment%20•%20Python%20•%20Scikit-Learn&descAlignY=68&descAlign=50" width="100%"/>
 
@@ -29,7 +29,7 @@ This assignment is a structured, practical exploration of **Regression in Machin
 
 Each algorithm is implemented in its own dedicated Jupyter notebook with: 
 - ✅ Clean, well-commented code
-- ✅ Real-world datasets
+- ✅ Real-world datasets.      
 - ✅ Evaluation metrics (R² Score & MSE)
 - ✅ Visualizations and plots
 - ✅ Final cross-model comparison
