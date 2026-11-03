@@ -10,7 +10,7 @@
 [![NumPy](https://img.shields.io/badge/NumPy-Numerical-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org)
 [![Pandas](https://img.shields.io/badge/Pandas-DataFrames-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org)
-
+      
 <br/>             
 
 > **From salary prediction to housing prices — a hands on exploration of 5 regression algorithms, regularization techniques, and model evaluation.**         
