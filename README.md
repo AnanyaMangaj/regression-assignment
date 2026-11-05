@@ -29,7 +29,7 @@ This assignment is a structured, practical exploration of **Regression in Machin
 
 Each algorithm is implemented in its own dedicated Jupyter notebook with: 
 - ✅ Clean, well-commented code
-- ✅ Real-world datasets.      
+- ✅ Real-world datasets.            
 - ✅ Evaluation metrics (R² Score & MSE)
 - ✅ Visualizations and plots
 - ✅ Final cross-model comparison
